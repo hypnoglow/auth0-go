@@ -1,1 +1,1 @@
-# auth0-go
+# authkit
