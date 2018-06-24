@@ -16,7 +16,7 @@ var (
 )
 
 // ExtractBearerToken returns bearer token from Authorization header of
-// the HTTP request.
+// the HTTP request. If request has no bearer token, returns ErrTokenNotFound.
 func ExtractBearerToken(req *http.Request) (string, error) {
 	t, err := bearerToken(req)
 	return string(t), err
